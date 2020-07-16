@@ -1,0 +1,12 @@
+{
+  "name": "pomodoroApp",
+  "displayName": "pomodoroApp",
+  "expo": {
+    "name": "pomodoroApp",
+    "slug": "pomodoroApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
