@@ -7,8 +7,8 @@ const ChangeTimes: React.FC = (props) => {
     return (
         <View style={{ padding: 10 }}>
             <TextInput
-                style={{ height: 40 }}
-                placeholder="Type here to change Pomodoro Length"
+                style={{ height: 40, width: 200 }}
+                placeholder=" Change Pomodoro Interval"
             />
             <Button
                 onPress={() => {
