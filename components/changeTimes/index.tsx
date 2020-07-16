@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 
 interface ChangeProps {
-    changeInterval: (newTomato: string) => void
+    changeInterval: (newTomato: string) => void,
+    currentTomato: number
 };
 
 const ChangeTimes: React.FC<ChangeProps> = (props: ChangeProps) => {
-const {changeInterval} = props;
+const {changeInterval, currentTomato} = props;
 const [newTomato, setNewTomato] = useState("");
 
     return (
         <View style={{ padding: 10 }}>
-            <TextInput
-                style={{ height: 40, width: 200 }}
-                placeholder=" Change Pomodoro Interval"
+            <Text>Change the Pomodoro Interval</Text>
+           <label><TextInput
+                style={{ height: 40 }}
+                placeholder={`${currentTomato}`}
                 onChangeText={text=>setNewTomato(text)}
-            />
+            /> Minutes</label> 
             <Button
                 onPress={() => changeInterval(newTomato)}
                 title="Submit Changes"

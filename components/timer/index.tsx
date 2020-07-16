@@ -43,7 +43,7 @@ import ChangeTimes from '../changeTimes'
     function changeInterval(newTomato: string){
         SetTomato(parseFloat(newTomato));
     }
-    
+
     return (
         <View>
             <Text>Hello!</Text>
@@ -52,7 +52,7 @@ import ChangeTimes from '../changeTimes'
                 onPress={runTimer}
                 title="Start"
             />
-            <ChangeTimes changeInterval={changeInterval}/>
+            <ChangeTimes changeInterval={changeInterval} currentTomato={tomato}/>
         </View>
     )
 }
